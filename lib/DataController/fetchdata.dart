@@ -1,10 +1,6 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:convert' as convert;
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert' as convert;
-import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'file:///D:/ValayProject/smart_app/smart_app/lib/ModelClass/moviemodel.dart';
 
@@ -16,7 +12,7 @@ String imagePath='https://image.tmdb.org/t/p/original';
 
 
 
-class NewsArticleListViewModel extends ChangeNotifier {
+class MovieListViewModel extends ChangeNotifier {
   notifyListeners();
   List<MovieList> searchResult = [];
   List<MovieList> userDetails = [];

@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'file:///D:/ValayProject/smart_app/smart_app/lib/CommonClass/bottombar.dart';
 import 'file:///D:/ValayProject/smart_app/smart_app/lib/DataController/fetchdata.dart';
 
-import 'MovieList/movielist.dart';
 
 
 
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //theme: ThemeData.dark(),
       home:   ChangeNotifierProvider(
-          builder: (_) => NewsArticleListViewModel(),
+          builder: (_) => MovieListViewModel(),
           child: BottomBarList()
       ),
      //  home: BottomBarList(),

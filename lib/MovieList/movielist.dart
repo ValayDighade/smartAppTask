@@ -1,13 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert' as convert;
-import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'file:///D:/ValayProject/smart_app/smart_app/lib/DataController/fetchdata.dart';
 import 'file:///D:/ValayProject/smart_app/smart_app/lib/MovieDes/moviedescription.dart';
-import 'file:///D:/ValayProject/smart_app/smart_app/lib/ModelClass/moviemodel.dart';
-
 class MovieList extends StatefulWidget {
   @override
   _MovieListState createState() => new _MovieListState();
@@ -19,7 +15,7 @@ class _MovieListState extends State<MovieList> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_){
-      Provider.of<NewsArticleListViewModel>(context, listen: false).getMovieList();
+      Provider.of<MovieListViewModel>(context, listen: false).getMovieList();
     });
      super.initState();
   }
@@ -33,7 +29,7 @@ class _MovieListState extends State<MovieList> {
 
   @override
   Widget build(BuildContext context) {
-     appState = Provider.of<NewsArticleListViewModel>(context);
+     appState = Provider.of<MovieListViewModel>(context);
 
 
     return SafeArea(

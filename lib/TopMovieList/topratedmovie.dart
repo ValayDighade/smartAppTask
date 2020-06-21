@@ -16,7 +16,7 @@ class _TopRatedMovieState extends State<TopRatedMovie> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_){
-      Provider.of<NewsArticleListViewModel>(context, listen: false).getTopRatedMovie();
+      Provider.of<MovieListViewModel>(context, listen: false).getTopRatedMovie();
     });
     super.initState();
   }
@@ -30,7 +30,7 @@ class _TopRatedMovieState extends State<TopRatedMovie> {
 
   @override
   Widget build(BuildContext context) {
-    appState = Provider.of<NewsArticleListViewModel>(context);
+    appState = Provider.of<MovieListViewModel>(context);
 
 
     return SafeArea(
@@ -72,9 +72,7 @@ class _TopRatedMovieState extends State<TopRatedMovie> {
 
   TopMovieListClass(context) {
     double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
-    TextStyle textStyle = new TextStyle(
-        fontSize: h / 55, fontFamily: 'Nunito', color: Colors.black45);
+
     return Column(
       children: <Widget>[
 
