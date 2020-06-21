@@ -71,7 +71,7 @@ class _TopRatedMovieState extends State<TopRatedMovie> {
 
 
   TopMovieListClass(context) {
-    double h = MediaQuery.of(context).size.height;
+
 
     return Column(
       children: <Widget>[
